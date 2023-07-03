@@ -1,0 +1,24 @@
+# python 3 TC=o(N**2)
+from math import *
+from collections import *
+from sys import *
+from os import *
+
+from typing import List
+
+def setZeros(matrix: List[List[int]]) -> None:
+	# Write your code here.
+    n=len(matrix)
+    m=len(matrix[0])
+    n_row=[0]*n
+    n_col = [0]*m
+    for i in range(n):
+        for j in range(m):
+            if matrix[i][j]==0:
+                n_row[i]=1
+                n_col[j] = 1
+
+    for i in  range(n):
+        for j in range(m):
+            if n_row[i]==1 or n_col[j]==1:
+                matrix[i][j]=0
