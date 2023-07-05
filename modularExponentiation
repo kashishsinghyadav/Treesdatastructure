@@ -1,0 +1,3 @@
+def modularExponentiation(x, n, m):
+	return (x**n)%m
+
