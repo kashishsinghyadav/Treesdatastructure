@@ -1,0 +1,8 @@
+def searchMatrix(mat: [[int]], target: int) -> bool:
+    # Write your code here.
+    for n in mat:
+        curr=n
+        if curr[-1]>=target:
+            if target in curr:
+                return True
+    return False
