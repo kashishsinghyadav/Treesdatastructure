@@ -1,0 +1,16 @@
+def LongestSubsetWithZeroSum(arr):
+
+    d={}
+    maxi=0
+    s=0
+    for i in range(len(arr)):
+        s+=arr[i]
+        if s==0:
+            maxi=i+1
+
+        else:
+            if s in d:
+                maxi= max(maxi,i-d[s])
+            else:
+                d[s]=i
+    return maxi
