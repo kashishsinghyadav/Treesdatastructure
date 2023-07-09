@@ -1,0 +1,12 @@
+
+def uniqueSubstrings(input ) :
+    l=0
+    res=0
+    s=set()
+    for i in range(len(input)):
+        while input[i] in s:
+            s.remove(input[l])
+            l+=1
+        s.add(input[i])
+        res=max(res,i-l+1)
+    return res
